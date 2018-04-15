@@ -13,7 +13,10 @@ $paypalProvider = new MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OA
 // Get authorization code
 if (!isset($_GET['code'])) {
     // Get authorization URL
-    $authorizationUrl = $paypalProvider->getAuthorizationUrl();
+    $options = [
+        'scope' => ['openid', 'profile', 'email', 'phone', 'address']
+    ];
+    $authorizationUrl = $paypalProvider->getAuthorizationUrl($options);
 
     // Get state and store it to the session
     $_SESSION['oauth2state'] = $paypalProvider->getState();
