@@ -91,7 +91,7 @@ class PaypalTest extends \PHPUnit_Framework_TestCase
 
     public function testGetAccessToken()
     {
-        $response = m::mock('Psr\Http\Message\ResponseInterface');
+        $response = m::mock('MichaelKaefer\GuzzleHttp6ForPrestashop17\Psr\Http\Message\ResponseInterface');
         $response->shouldReceive('getBody')->andReturn('{"access_token": "mock_access_token", "token_type":"bearer", "expires_in":3600, "refresh_token":"mock_refresh_token"}');
         $response->shouldReceive('getHeader')->andReturn(['content-type' => 'json']);
         $response->shouldReceive('getStatusCode')->andReturn(200);
@@ -128,12 +128,12 @@ class PaypalTest extends \PHPUnit_Framework_TestCase
         $payer_id = uniqid();
 
 
-        $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
+        $postResponse = m::mock('MichaelKaefer\GuzzleHttp6ForPrestashop17\Psr\Http\Message\ResponseInterface');
         $postResponse->shouldReceive('getBody')->andReturn('{"access_token": "mock_access_token", "token_type":"bearer", "expires_in":3600, "refresh_token":"mock_refresh_token"}');
         $postResponse->shouldReceive('getHeader')->andReturn(['content-type' => 'json']);
         $postResponse->shouldReceive('getStatusCode')->andReturn(200);
 
-        $userResponse = m::mock('Psr\Http\Message\ResponseInterface');
+        $userResponse = m::mock('MichaelKaefer\GuzzleHttp6ForPrestashop17\Psr\Http\Message\ResponseInterface');
         $userResponse->shouldReceive('getBody')->andReturn('{"user_id": "'.$userId.'","name": "'.$name.'","given_name": "'.$given_name.'","family_name": "'.$family_name.'","email": "'.$email.'","verified": '.($verified ? 'true' : 'false').',"gender": "'.$gender.'","birthdate": "'.$birthdate.'","zoneinfo": "'.$zoneinfo.'","locale": "'.$locale.'","phone_number": "'.$phone_number.'","address": { },"verified_account": '.($verified_account ? 'true' : 'false').',"account_type": "'.$account_type.'","age_range": "'.$age_range.'","payer_id": "'.$payer_id.'"}');
         $userResponse->shouldReceive('getHeader')->andReturn(['content-type' => 'json']);
         $userResponse->shouldReceive('getStatusCode')->andReturn(200);
@@ -200,7 +200,7 @@ class PaypalTest extends \PHPUnit_Framework_TestCase
     public function testExceptionThrownWhenErrorObjectReceived()
     {
         $status = rand(401,599);
-        $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
+        $postResponse = m::mock('MichaelKaefer\GuzzleHttp6ForPrestashop17\Psr\Http\Message\ResponseInterface');
         $postResponse->shouldReceive('getBody')->andReturn('{"name": "mock_error_name","message": "mock_error_message","information_link": "mock_error_link","details": "mock_error_details"}');
         $postResponse->shouldReceive('getHeader')->andReturn(['content-type' => 'json']);
         $postResponse->shouldReceive('getStatusCode')->andReturn($status);

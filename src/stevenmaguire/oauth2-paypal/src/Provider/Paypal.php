@@ -4,7 +4,7 @@ use MichaelKaefer\OAuth2ClientForPrestashop17\League\OAuth2\Client\Provider\Abst
 use MichaelKaefer\OAuth2ClientForPrestashop17\League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use MichaelKaefer\OAuth2ClientForPrestashop17\League\OAuth2\Client\Token\AccessToken;
 use MichaelKaefer\OAuth2ClientForPrestashop17\League\OAuth2\Client\Tool\BearerAuthorizationTrait;
-use Psr\Http\Message\ResponseInterface;
+use MichaelKaefer\GuzzleHttp6ForPrestashop17\Psr\Http\Message\ResponseInterface;
 
 class Paypal extends AbstractProvider
 {
