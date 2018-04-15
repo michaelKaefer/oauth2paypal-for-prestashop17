@@ -1,4 +1,4 @@
-<?php namespace Stevenmaguire\OAuth2\Client\Provider;
+<?php namespace MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 

@@ -19,12 +19,12 @@ composer require stevenmaguire/oauth2-paypal
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\Stevenmaguire\OAuth2\Client\Provider\Paypal` as the provider.
+Usage is the same as The League's OAuth client, using `\MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OAuth2\Client\Provider\Paypal` as the provider.
 
 ### Authorization Code Flow
 
 ```php
-$provider = new Stevenmaguire\OAuth2\Client\Provider\Paypal([
+$provider = new MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OAuth2\Client\Provider\Paypal([
     'clientId'          => '{paypal-client-id}',
     'clientSecret'      => '{paypal-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
@@ -51,7 +51,7 @@ You can review a [full list of scopes](https://developer.paypal.com/docs/integra
 ### Refreshing a Token
 
 ```php
-$provider = new Stevenmaguire\OAuth2\Client\Provider\Paypal([
+$provider = new MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OAuth2\Client\Provider\Paypal([
     'clientId'          => '{paypal-client-id}',
     'clientSecret'      => '{paypal-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url'

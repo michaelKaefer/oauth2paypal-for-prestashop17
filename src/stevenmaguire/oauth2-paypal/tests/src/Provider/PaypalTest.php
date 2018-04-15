@@ -1,4 +1,4 @@
-<?php namespace Stevenmaguire\OAuth2\Client\Test\Provider;
+<?php namespace MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OAuth2\Client\Test\Provider;
 
 use Mockery as m;
 
@@ -8,7 +8,7 @@ class PaypalTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->provider = new \Stevenmaguire\OAuth2\Client\Provider\Paypal([
+        $this->provider = new \MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OAuth2\Client\Provider\Paypal([
             'clientId' => 'mock_client_id',
             'clientSecret' => 'mock_secret',
             'redirectUri' => 'none',
@@ -55,7 +55,7 @@ class PaypalTest extends \PHPUnit_Framework_TestCase
 
     public function testSandbox()
     {
-        $provider = new \Stevenmaguire\OAuth2\Client\Provider\Paypal([
+        $provider = new \MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OAuth2\Client\Provider\Paypal([
             'clientId' => 'mock_client_id',
             'clientSecret' => 'mock_secret',
             'redirectUri' => 'none',
