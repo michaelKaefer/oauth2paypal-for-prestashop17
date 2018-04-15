@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "michaelkaefer/oauth2client-for-prestashop17": "^1.0.4"
+        "michaelkaefer/oauth2client-for-prestashop17": "^1.0.5"
     },
     "keywords": [
         "php",
