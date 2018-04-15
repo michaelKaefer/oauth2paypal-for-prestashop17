@@ -1,6 +1,6 @@
 <?php namespace MichaelKaefer\OAuth2PaypalForPrestashop17\Stevenmaguire\OAuth2\Client\Provider;
 
-use League\OAuth2\Client\Provider\ResourceOwnerInterface;
+use MichaelKaefer\OAuth2ClientForPrestashop17\League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
 class PaypalResourceOwner implements ResourceOwnerInterface
 {
