@@ -1,0 +1,28 @@
+{
+    "name": "michaelkaefer/oauth2paypal-for-prestashop17",
+    "description": "Enables you in PrestaShop 1.7 to use oauth2-paypal.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Käfer",
+            "email": "michael.kaefer1@gmx.at"
+        }
+    ],
+    "require": {
+        "michaelkaefer/oauth2client-for-prestashop17": "^1.0.2"
+    },
+    "keywords": [
+        "php",
+        "oauth2",
+        "oauth",
+        "prestashop",
+        "paypal"
+    ],
+    "autoload": {
+        "psr-4": {
+            "MichaelKaefer\\OAuth2PaypalForPrestashop17\\Stevenmaguire\\OAuth2\\Client\\": [
+                "src/stevenmaguire/oauth2-paypal/src/"
+            ]
+        }
+    }
+}
